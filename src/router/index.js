@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import AboutView from '../views/AboutView'
+import HomeView from '@/views/HomeView.vue'
+import AboutView from '@/views/AboutView'
 import BookListingView from "@/views/book/BookListingView";
 import BookDetailView from "@/views/book/BookDetailView";
 import BookDetailPropsView from "@/views/book/BookDetailPropsView";
+import NotFound from "@/views/NotFound";
 
 const routes = [
     {
@@ -31,7 +32,13 @@ const routes = [
         name: 'BookDetailPropsView',
         component: BookDetailPropsView,
         props: true
-    }
+    },
+    {
+        path: '/:pathMatch(.*)*',
+        name: 'NotFound',
+        component: NotFound
+    },
+
 ]
 
 const router = createRouter({
