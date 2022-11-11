@@ -1,13 +1,16 @@
 <template>
-  <h1>App Vue</h1>
+  <h1>App Component</h1>
+  <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
+  </nav>
+  <router-view/>
 </template>
 
 <script>
 
 export default {
   name: 'App',
-  components: {
-  }
 }
 </script>
 
