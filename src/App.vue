@@ -2,7 +2,8 @@
   <h1>App Component</h1>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About</router-link> |
+    <router-link :to="{name: 'BookListingView'}">Books</router-link>
   </nav>
   <router-view/>
 </template>
